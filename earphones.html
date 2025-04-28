@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hightech Solutions Limited</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Hightech Solutions Logo"> <!-- Replace with actual logo -->
+            </div>
+            <div class="company-name">
+                <h1>HIGHTECH SOLUTIONS LIMITED</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="earphones.html">Earphones</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+		
+		<link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS -->
+    	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    </header>
+
+    <!-- Main Content Section -->
+    <!-- InstanceBeginEditable name="MainContent" -->
+    <main>
+      <section class="earphones">
+        <h2>Earphones</h2>
+
+        <div class="earphones-list">
+            <!-- Example Earphone Item 1 -->
+            <div class="earphone-item">
+                <img src="images/samsung.jpeg" alt="Samsung">
+                <h3>Samsung</h3>
+                <p>Price: $99.99</p>
+                <button class="add-to-cart" data-item="1">Add to Cart</button>
+            </div>
+
+            <!-- Example Earphone Item 2 -->
+            <div class="earphone-item">
+                <img src="images/iphone.jpeg" alt="iPhone">
+                <h3>iPhone</h3>
+                <p>Price: $149.99</p>
+                <button class="add-to-cart" data-item="2">Add to Cart</button>
+            </div>
+
+            <!-- Example Earphone Item 3 -->
+            <div class="earphone-item">
+                <img src="images/oraimo.jpeg" alt="Oraimo">
+                <h3>Oraimo</h3>
+                <p>Price: $199.99</p>
+                <button class="add-to-cart" data-item="3">Add to Cart</button>
+            </div>
+        </div>
+
+         <!-- Cart and Checkout Section -->
+        <div class="cart-checkout-container">
+            <div class="cart">
+                <button class="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+            </div>
+
+            <div class="checkout">
+                <button class="checkout-btn" onclick="completePurchase()">Checkout</button>
+                <div id="purchase-message-container" style="display: none;">
+                    <p id="purchase-message" style="color: green;">Purchase completed successfully!</p>
+                </div>
+            </div>
+		  </div>
+    </section>
+		
+		<script>
+			let cartCount = 0; // Initialize cart count
+
+			// Function to update the cart count
+			function updateCart() {
+				cartCount++; // Increment the cart count
+				document.getElementById('cart-count').textContent = cartCount; // Update the cart count in the UI
+			}
+
+			// Add event listeners to "Add to Cart" buttons
+			const addToCartButtons = document.querySelectorAll('.add-to-cart');
+			addToCartButtons.forEach(button => {
+				button.addEventListener('click', function() {
+					updateCart(); // Update the cart when an item is added
+				});
+			});
+
+			// Function to complete the purchase
+			function completePurchase() {
+				if (cartCount > 0) {
+					// Show success message after checkout
+					document.getElementById('purchase-message-container').style.display = 'flex';
+					// Hide the message after 5 seconds
+					setTimeout(() => {
+						document.getElementById('purchase-message-container').style.display = 'none';
+					}, 5000); // Hide the message after 5 seconds
+
+					// Optionally, reset the cart after purchase is completed
+					cartCount = 0;
+					document.getElementById('cart-count').textContent = cartCount;
+				} else {
+					alert('Your cart is empty! Please add items to your cart before checking out.');
+				}
+			}
+		</script>
+
+    </main>
+    <!-- InstanceEndEditable -->
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Hightech Solutions. All Rights Reserved.</p>
+    </footer>
+
+</body>
+<!-- InstanceEnd --></html>

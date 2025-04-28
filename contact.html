@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hightech Solutions Limited</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Hightech Solutions Logo"> <!-- Replace with actual logo -->
+            </div>
+            <div class="company-name">
+                <h1>HIGHTECH SOLUTIONS LIMITED</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="earphones.html">Earphones</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+		
+		<link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS -->
+    	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    </header>
+
+    <!-- Main Content Section -->
+    <!-- InstanceBeginEditable name="MainContent" -->
+    <main>
+        <section class="contact-us">
+			<h2>Contact Us</h2>
+			<p>If you have any questions or need further information, feel free to reach out to us. We are here to help!</p>
+
+			<!-- Contact Form -->
+			<form class="contact-form" onsubmit="return handleSubmit(event)">
+				<div class="form-row">
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" required placeholder="Your Name">
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" required placeholder="Your Email">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="message">Message</label>
+					<textarea id="message" name="message" required placeholder="Your Message" rows="4"></textarea>
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="submit-btn">Submit</button>
+				</div>
+			</form>
+
+			<!-- Success Message Section -->
+			<div id="success-message-container" style="display: none;">
+				<p id="success-message" style="color: green;">Your message has been sent successfully!</p>
+			</div>
+		</section>
+		
+		<script>
+			// Handle form submission
+			function handleSubmit(event) {
+				event.preventDefault();  // Prevent default form submission (no page redirect)
+
+				// Show the success message after form submission
+				document.getElementById('success-message-container').style.display = 'flex';
+
+				// Hide the success message after 5 seconds
+				setTimeout(() => {
+					document.getElementById('success-message-container').style.display = 'none';
+				}, 5000); // Hide the message after 5 seconds
+
+				// Optionally, reset the form after submission
+				document.querySelector('.contact-form').reset();
+			}
+		</script>
+		
+		
+    </main>
+    <!-- InstanceEndEditable -->
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Hightech Solutions. All Rights Reserved.</p>
+    </footer>
+
+</body>
+<!-- InstanceEnd --></html>

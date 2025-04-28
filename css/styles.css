@@ -1,0 +1,595 @@
+/* General Body Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1e2a47; /* Dark Blue */
+    color: #000; /* Black text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the main content */
+.container {
+    background-color: #b2c9e2; /* Light Blue */
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #314a75; /* Lighter dark blue to contrast logo better */
+    padding: 10px;
+    color: white;
+}
+
+/* Header Container for Logo and Company Name */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 50px; /* Adjust the width of the logo */
+    height: auto;
+}
+
+/* Company Name Styling */
+.company-name h1 {
+    font-size: 24px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* Navigation Menu Styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #314a75;
+    background-color: #314a75;
+}
+
+nav ul li a:hover {
+    background-color: #3a5c9a; /* Medium Blue for hover */
+    color: #fff;
+}
+
+/* Main Section Styling */
+main {
+    background-color: #b2c9e2; /* Light Blue */
+    color: black;
+    padding: 20px;
+    margin-bottom: 0; /* Ensure no bottom margin is creating extra space */
+}
+
+/* Intro Section Styling */
+.intro h2 {
+    font-size: 20px;
+    color: #314a75; /* Matching color to header */
+}
+
+.intro p {
+    font-size: 16px;
+}
+
+/* Call-to-Action Section */
+.cta {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0; /* Make sure there's no bottom margin */
+}
+
+.cta h3 {
+    font-size: 24px;
+}
+
+.cta button {
+    background-color: #314a75;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.cta button a {
+    color: white;
+    text-decoration: none;
+}
+
+.cta button:hover {
+    background-color: #3a5c9a; /* Medium Blue on hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: #314a75; /* Lighter dark blue */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 0; /* Ensure no margin is pushing the footer down */
+}
+
+/* Hyperlinks Styling */
+a {
+    color: #6a2a8c; /* Dark Purple */
+}
+
+a:visited {
+    color: #4b1d5c; /* Dark Purple (Visited) */
+}
+
+
+/* Values Section: 3 Columns in a Single Row */
+.values-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.value-item {
+    background-color: #fff; /* White background for each value */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Each column takes up 30% of the row */
+    text-align: center;
+}
+
+.value-item h4 {
+    font-size: 20px;
+    color: #314a75; /* Matching color to header */
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 16px;
+    color: #333; /* Darker text for readability */
+}
+
+/* Adjust layout for small screens (responsive design) */
+@media (max-width: 768px) {
+    .values-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .value-item {
+        width: 80%; /* Make each value item 80% of the screen on smaller devices */
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Contact Us Section */
+.contact-us {
+    background-color: #b2c9e2; /* Light Blue */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us h2 {
+    font-size: 24px;
+    color: #314a75; /* Dark Blue */
+    margin-bottom: 20px;
+}
+
+.contact-us p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Form Row for Name and Email (flexbox to align on the same row) */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between the Name and Email fields */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 48%; /* Make each field take up 48% of the width */
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #314a75;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #314a75;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    background-color: #314a75;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #3a5c9a;
+}
+
+/* Success Message Section */
+#success-message-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    justify-content: flex-end; /* Align success message to the right */
+}
+
+#success-message {
+    margin-top: 0;
+    font-size: 18px;
+    color: green;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .form-group input, .form-group textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .form-row {
+        flex-direction: column; /* Stack Name and Email fields on smaller screens */
+        align-items: center;
+    }
+
+    .form-group {
+        width: 80%; /* Make form fields take up more space on small screens */
+    }
+
+    #success-message-container {
+        margin-left: 0; /* Remove space on small screens */
+        margin-top: 10px; /* Adjust top margin for small screens */
+    }
+}
+
+/* Reviews Section */
+.reviews {
+    background-color: #b2c9e2; /* Light Blue */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reviews h2 {
+    font-size: 24px;
+    color: #314a75; /* Dark Blue */
+    margin-bottom: 20px;
+}
+
+.reviews p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Reviews Container (Flexbox for Single Row) */
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds spacing between the columns */
+    align-items: stretch; /* Ensures items stretch to the same height */
+}
+
+.review-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%; /* Each review takes up 30% of the row */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.review-item h3 {
+    font-size: 20px;
+    color: #314a75; /* Dark Blue */
+    margin-bottom: 10px;
+}
+
+.review-item p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Customer Image Styling */
+.review-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design (Smaller Screens) */
+@media (max-width: 768px) {
+    .reviews-container {
+        flex-direction: column; /* Stack reviews vertically on small screens */
+        align-items: center; /* Center reviews */
+    }
+
+    .review-item {
+        width: 80%; /* Each review takes up 80% on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+/* Sitemap Section */
+.sitemap {
+    background-color: #b2c9e2; /* Light Blue */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sitemap h2 {
+    font-size: 24px;
+    color: #314a75; /* Dark Blue */
+    margin-bottom: 20px;
+}
+
+.sitemap p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Search Box Styling */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #314a75;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Sitemap Container */
+.sitemap-container {
+    padding-left: 20px;
+}
+
+.sitemap-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sitemap-list > li {
+    margin: 10px 0;
+}
+
+.sitemap-list a {
+    color: #314a75; /* Dark Blue links */
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.sitemap-list a i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.sitemap-list a:hover {
+    color: #3a5c9a; /* Hover color */
+}
+
+/* Nested Lists (Sub-pages) */
+.sitemap-list ul {
+    margin-left: 20px; /* Indent sub-pages */
+    margin-top: 10px;
+}
+
+.sitemap-list ul li {
+    margin: 5px 0;
+}
+
+.sitemap-list ul li a {
+    font-size: 16px;
+    color: #6a2a8c; /* Dark Purple for sub-pages */
+}
+
+.sitemap-list ul li a:hover {
+    color: #4b1d5c; /* Darker Purple on hover */
+}
+
+/* Responsive Design (Smaller Screens) */
+@media (max-width: 768px) {
+    .sitemap h2 {
+        font-size: 20px;
+    }
+
+    .sitemap p {
+        font-size: 14px;
+    }
+
+    .sitemap-list a {
+        font-size: 16px;
+    }
+
+    .sitemap-list ul li a {
+        font-size: 14px;
+    }
+
+    .search-box {
+        width: 90%;
+    }
+}
+
+
+/* Earphones Section */
+.earphones {
+    background-color: #b2c9e2; /* Light Blue */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.earphones h2 {
+    font-size: 24px;
+    color: #314a75; /* Dark Blue */
+    margin-bottom: 20px;
+}
+
+.earphones-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.earphone-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%; /* Each earphone item takes up 30% of the row */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.earphone-item h3 {
+    font-size: 20px;
+    color: #314a75;
+    margin-bottom: 10px;
+}
+
+.earphone-item p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.earphone-item button {
+    background-color: #314a75;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.earphone-item button:hover {
+    background-color: #3a5c9a; /* Hover effect */
+}
+
+/* Cart and Checkout Section (Flexbox for horizontal alignment) */
+.cart-checkout-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Adds spacing between the buttons */
+    margin-top: 30px;
+    align-items: center; /* Align items vertically centered */
+}
+
+/* Cart Button Styling */
+.cart-btn {
+    background-color: #314a75;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* Make sure the Cart button does not stretch */
+}
+
+.cart-btn:hover {
+    background-color: #3a5c9a; /* Hover effect */
+}
+
+/* Checkout Button Styling */
+.checkout-btn {
+    background-color: #28a745; /* Green for checkout */
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* Make sure the Checkout button does not stretch */
+}
+
+.checkout-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Purchase Success Message Container (Align Right) */
+#purchase-message-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Space between checkout button and message */
+    justify-content: flex-end; /* Align purchase message to the right */
+}
+
+/* Purchase Success Message */
+#purchase-message {
+    margin-top: 0;
+    font-size: 18px;
+    color: green;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .earphone-item {
+        width: 48%; /* Make each earphone item 48% of the screen width */
+    }
+
+    .cart-checkout-container {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        align-items: center;
+    }
+
+    .cart-btn, .checkout-btn {
+        width: 80%; /* Make buttons full width on smaller screens */
+    }
+
+    #purchase-message-container {
+        margin-left: 0; /* Remove space on small screens */
+        margin-top: 10px; /* Adjust top margin for small screens */
+    }
+}
