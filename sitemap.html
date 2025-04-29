@@ -5,33 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hightech Solutions Limited</title>
     <link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-
+	<a href="#main-content" class="skip-link">Skip to content</a>
     <!-- Header Section -->
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Hightech Solutions Logo"> <!-- Replace with actual logo -->
+            <div class="header-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo">
+                </div>
+                <div class="company-name">
+                    <h1>HIGHTECH SOLUTIONS LIMITED</h1>
+                </div>
             </div>
-            <div class="company-name">
-                <h1>HIGHTECH SOLUTIONS LIMITED</h1>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="earphones.html">Earphones</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-            </ul>
-        </nav>
-		
-		<link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS -->
-    	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    </header>
+            <nav>
+			<button class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+			<div class="menu" id="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="earphones.html">Earphones</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="reviews.html">Reviews</a></li>
+					<li><a href="sitemap.html">Sitemap</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="privacy-policy.html">Privacy Policy</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<script>
+		const menuToggle = document.querySelector('.menu-toggle');
+		const menu = document.querySelector('.menu');
+
+		menuToggle.addEventListener('click', () => {
+			menu.classList.toggle('active');
+			menuToggle.classList.toggle('active');
+		});
+	</script>
 
     <!-- Main Content Section -->
     <!-- InstanceBeginEditable name="MainContent" -->
@@ -45,9 +58,9 @@
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="earphones.html"><i class="fas fa-headphones"></i> Earphones</a>
                     <ul>
-                        <li><a href="earphones/model1.html"><i class="fas fa-cogs"></i> Model 1</a></li>
-                        <li><a href="earphones/model2.html"><i class="fas fa-cogs"></i> Model 2</a></li>
-                        <li><a href="earphones/model3.html"><i class="fas fa-cogs"></i> Model 3</a></li>
+                        <li><a href="earphones.html"><i class="fas fa-cogs"></i> Samsung</a></li>
+                        <li><a href="earphones.html"><i class="fas fa-cogs"></i> iPhone</a></li>
+                        <li><a href="earphones.html"><i class="fas fa-cogs"></i> Oraimo</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
@@ -62,8 +75,9 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Hightech Solutions. All Rights Reserved.</p>
-    </footer>
+		<p>&copy; 2025 Hightech Solutions. All Rights Reserved.</p>
+		<p><a href="disclaimer.html">Disclaimer</a></p>
+	</footer>
 
 </body>
 <!-- InstanceEnd --></html>

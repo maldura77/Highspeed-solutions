@@ -5,33 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hightech Solutions Limited</title>
     <link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-
+	<a href="#main-content" class="skip-link">Skip to content</a>
     <!-- Header Section -->
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Hightech Solutions Logo"> <!-- Replace with actual logo -->
+            <div class="header-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo">
+                </div>
+                <div class="company-name">
+                    <h1>HIGHTECH SOLUTIONS LIMITED</h1>
+                </div>
             </div>
-            <div class="company-name">
-                <h1>HIGHTECH SOLUTIONS LIMITED</h1>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="earphones.html">Earphones</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-            </ul>
-        </nav>
-		
-		<link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS -->
-    	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    </header>
+            <nav>
+			<button class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+			<div class="menu" id="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="earphones.html">Earphones</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="reviews.html">Reviews</a></li>
+					<li><a href="sitemap.html">Sitemap</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="privacy-policy.html">Privacy Policy</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<script>
+		const menuToggle = document.querySelector('.menu-toggle');
+		const menu = document.querySelector('.menu');
+
+		menuToggle.addEventListener('click', () => {
+			menu.classList.toggle('active');
+			menuToggle.classList.toggle('active');
+		});
+	</script>
 
     <!-- Main Content Section -->
     <!-- InstanceBeginEditable name="MainContent" -->
@@ -68,6 +81,13 @@
 			<div id="success-message-container" style="display: none;">
 				<p id="success-message" style="color: green;">Your message has been sent successfully!</p>
 			</div>
+			
+			<section class="google-map">
+				<h2>Our Location</h2>
+				<p>Find us at Hightech Solutions Limited!</p>
+				<!-- Google Map Embed Link -->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12416.609500137563!2d-77.05307622712212!3d38.920494597498816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7da5071482f%3A0x5f6de718c1617834!2sAdams%20Morgan%2C%20Washington%2C%20DC!5e0!3m2!1sen!2sus!4v1745923219295!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</section>
 		</section>
 		
 		<script>
@@ -94,8 +114,9 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Hightech Solutions. All Rights Reserved.</p>
-    </footer>
+		<p>&copy; 2025 Hightech Solutions. All Rights Reserved.</p>
+		<p><a href="disclaimer.html">Disclaimer</a></p>
+	</footer>
 
 </body>
 <!-- InstanceEnd --></html>

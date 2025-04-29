@@ -65,6 +65,58 @@ nav ul li a:hover {
     color: #fff;
 }
 
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* Display Menu for Smaller Screens */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu ul {
+        display: block;
+        padding: 0;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Toggle the active class on menu */
+.menu-toggle.active + .menu {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Main Section Styling */
 main {
     background-color: #b2c9e2; /* Light Blue */
@@ -129,7 +181,7 @@ a {
 }
 
 a:visited {
-    color: #4b1d5c; /* Dark Purple (Visited) */
+    color: #3498db; /* Dark Purple (Visited) */
 }
 
 
@@ -592,4 +644,114 @@ a:visited {
         margin-left: 0; /* Remove space on small screens */
         margin-top: 10px; /* Adjust top margin for small screens */
     }
+} 
+
+
+/* Disclaimer Section Styling */
+.disclaimer {
+    background-color: #f4f4f4; /* Light background for the disclaimer */
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
 }
+
+.disclaimer p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* Style for the Disclaimer Link */
+footer a {
+    color: #007BFF; /* Blue color for visibility */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the link bold */
+}
+
+footer a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+
+/* Container to center content */
+.animation-container {
+    text-align: center; /* Center the text */
+    margin-top: 40px;
+}
+
+/* Style for the button */
+#showGifButton, #hideGifButton {
+    background-color: #314a75; /* Dark blue background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px; /* Space between text and button */
+}
+
+/* Button hover effect */
+#showGifButton:hover, #hideGifButton:hover {
+    background-color: #3a5c9a; /* Slightly lighter blue on hover */
+}
+
+/* Style for the GIF container */
+#gifContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Make sure the GIF is responsive */
+#gifContainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Google Map Section Styling */
+.google-map {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.google-map iframe {
+    width: 100%;
+    max-width: 800px; /* Maximum width */
+    height: 450px; /* Fixed height */
+    border: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .google-map iframe {
+        height: 300px; /* Reduce the height on small screens */
+    }
+}
+
+
+/* Always show the Skip to Content Link */
+.skip-link {
+    position: fixed;
+    top: 10px; /* Place it near the top of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust the element back by half of its width */
+    background-color: #314a75; /* Dark blue background */
+    color: white;
+    padding: 10px;
+    z-index: 1000;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Change background color on hover for better visibility */
+.skip-link:hover {
+    background-color: #3a5c9a;
+}
+

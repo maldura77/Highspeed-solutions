@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hightech Solutions Limited</title>
     <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+	  <a href="#main-content" class="skip-link">Skip to content</a>
 
     <!-- Main Content Container -->
     <div class="container">
@@ -21,37 +23,96 @@
                 </div>
             </div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="earphones.html">Earphones</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="sitemap.html">Sitemap</a></li>
-                </ul>
-            </nav>
-        </header>
+			<button class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+			<div class="menu" id="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="earphones.html">Earphones</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="reviews.html">Reviews</a></li>
+					<li><a href="sitemap.html">Sitemap</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="privacy-policy.html">Privacy Policy</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<script>
+		const menuToggle = document.querySelector('.menu-toggle');
+		const menu = document.querySelector('.menu');
+
+		menuToggle.addEventListener('click', () => {
+			menu.classList.toggle('active');
+			menuToggle.classList.toggle('active');
+		});
+	</script>
 
         <!-- Main Content Section -->
-        <main>
-            <section class="intro">
-                <h2>Introduction to Hightech Solutions</h2>
-                <p>Welcome to Hightech Solutions, your trusted partner in cutting-edge technology products. We specialize in delivering innovative solutions for all your tech needs.</p>
-            </section>
+        <main id="main-content">
+			
+				<section class="intro">
+					<h2>Introduction to Hightech Solutions</h2>
+					<p>Welcome to Hightech Solutions, your trusted partner in cutting-edge technology products. We specialize in delivering innovative solutions for all your tech needs.</p>
+				</section>
 
-            <!-- Call to Action Section -->
-            <section class="cta">
-                <h3>Order Now</h3>
-                <p>Click below to order the best tech products for your needs!</p>
-                <button><a href="earphones.html">Order Now</a></button>
-            </section>
+				<!-- Call to Action Section -->
+				<section class="cta">
+					<h3>Order Now</h3>
+					<p>Click below to order the best tech products for your needs!</p>
+					<button><a href="earphones.html">Order Now</a></button>
+				</section>
+				<section class="animation-commercial">
+					<!-- Container to center the content -->
+					<div class="animation-container">
+						<h2>Watch Our Animation Commercial</h2>
+						<!-- Button to trigger the display of the animation -->
+						<button id="showGifButton">Show Animation</button>
+					</div>
+
+					<!-- Hidden GIF (initially invisible) -->
+					<div id="gifContainer" style="display: none;">
+						<img src="images/animate.gif" alt="Animation Commercial" width="800" height="600">
+						<br/>
+						<!-- Button to hide the animation -->
+						<button id="hideGifButton">Hide Animation</button>
+					</div>
+				</section>
+			
         </main>
     </div>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Hightech Solutions. All Rights Reserved.</p>
-    </footer>
+		<p>&copy; 2025 Hightech Solutions. All Rights Reserved.</p>
+		<p><a href="disclaimer.html">Disclaimer</a></p>
+	</footer>
+	<script>
+		// Get the button and the GIF container
+		const showGifButton = document.getElementById('showGifButton');
+		const hideGifButton = document.getElementById('hideGifButton');
+		const gifContainer = document.getElementById('gifContainer');
+
+		// Show the GIF and hide the "Show Animation" button when clicked
+		showGifButton.addEventListener('click', function() {
+			gifContainer.style.display = 'block'; // Show the GIF
+			showGifButton.style.display = 'none'; // Hide the "Show Animation" button
+
+			// Set timeout to hide the animation after 20 seconds
+			setTimeout(function() {
+				gifContainer.style.display = 'none'; // Hide the GIF
+				showGifButton.style.display = 'inline-block'; // Show the "Show Animation" button again
+			}, 15000); // 15,000 milliseconds = 15 seconds
+		});
+
+		// Hide the GIF and show the "Show Animation" button when clicked
+		hideGifButton.addEventListener('click', function() {
+			gifContainer.style.display = 'none'; // Hide the GIF
+			showGifButton.style.display = 'inline-block'; // Show the "Show Animation" button again
+		});
+	</script>
+
 
 </body>
 </html>
