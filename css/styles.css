@@ -755,3 +755,19 @@ footer a:hover {
     background-color: #3a5c9a;
 }
 
+
+/* Style the link to look like a button */
+.button-link {
+    background-color: #314a75; /* Dark blue background */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none; /* Remove the underline */
+    border-radius: 5px;
+    display: inline-block; /* Makes it behave like a block-level element */
+    font-size: 18px;
+    text-align: center;
+}
+
+.button-link:hover {
+    background-color: #3a5c9a; /* Slightly lighter blue on hover */
+}
