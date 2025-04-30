@@ -18,93 +18,131 @@ header {
     background-color: #314a75; /* Lighter dark blue to contrast logo better */
     padding: 10px;
     color: white;
+    margin-top: 80px; /* Add space above the header (adjustable for more space) */
 }
 
-/* Header Container for Logo and Company Name */
-.header-container {
+/* Header container styling */
+header .container {
+    width: 100%; /* Ensure full width of the container */
+    max-width: 1200px; /* Optional: limit the maximum width for large screens */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Header contents */
+header .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Logo Styling */
-.logo img {
-    width: 50px; /* Adjust the width of the logo */
+/* Logo styling */
+header .logo img {
+    max-width: 100px; /* Ensure the logo is responsive */
     height: auto;
 }
 
-/* Company Name Styling */
-.company-name h1 {
-    font-size: 24px;
+/* Company name styling */
+header .company-name h1 {
+    font-size: 24px; /* Adjust the font size for responsiveness */
     margin: 0;
-    padding-left: 10px;
+	padding-left: 10px;
 }
 
-/* Navigation Menu Styling */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+/* Navigation Styling */
+nav {
+    position: relative;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    border: 1px solid #314a75;
-    background-color: #314a75;
-}
-
-nav ul li a:hover {
-    background-color: #3a5c9a; /* Medium Blue for hover */
-    color: #fff;
-}
-
-
-/* Mobile Menu Toggle */
+/* Menu toggle button for mobile devices */
 .menu-toggle {
-    display: none;
-    font-size: 30px;
-    background: none;
+    display: none; /* Hidden by default on larger screens */
+    background-color: transparent;
     border: none;
     color: white;
+    font-size: 30px;
+    cursor: pointer;
 }
 
-/* Display Menu for Smaller Screens */
+/* Navigation Menu */
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Menu items styling */
+.menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* Make the header and navigation responsive */
 @media (max-width: 768px) {
+    /* Mobile-specific adjustments */
+    header {
+        margin-top: 120px; /* More space above on mobile */
+        padding: 15px; /* Increase padding on smaller screens */
+    }
+
+    .header-container {
+        flex-direction: column; /* Stack logo and company name vertically on mobile */
+        align-items: center;
+    }
+
+    header .company-name h1 {
+        font-size: 22px; /* Smaller font size for mobile */
+    }
+
+    /* Menu toggle button on mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide the menu by default on mobile */
     .menu {
         display: none;
         width: 100%;
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: #314a75; /* Match the header color */
     }
 
+    /* Show the menu when toggled */
     .menu.active {
-        display: block;
+        display: flex;
     }
 
+    /* Menu items for mobile */
     .menu ul {
-        display: block;
-        padding: 0;
+        flex-direction: column;
+        width: 100%;
     }
 
     .menu ul li {
         margin: 10px 0;
     }
+}
 
-    .menu-toggle {
-        display: block;
+/* Responsive adjustments for larger screens (optional) */
+@media (min-width: 1200px) {
+    .header-container {
+        max-width: 1200px; /* Limit width on larger screens */
     }
 }
 
-/* Toggle the active class on menu */
-.menu-toggle.active + .menu {
-    display: block;
-}
 
 
 
@@ -734,10 +772,15 @@ footer a:hover {
 }
 
 
+/* Push the header down */
+header {
+    margin-top: 60px; /* Add space at the top */
+}
+
 /* Always show the Skip to Content Link */
 .skip-link {
     position: fixed;
-    top: 10px; /* Place it near the top of the screen */
+    top: 20px; /* Adjust space from the top */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust the element back by half of its width */
     background-color: #314a75; /* Dark blue background */
@@ -750,10 +793,19 @@ footer a:hover {
     transition: background-color 0.3s;
 }
 
-/* Change background color on hover for better visibility */
-.skip-link:hover {
-    background-color: #3a5c9a;
+/* Make the skip link visible when focused */
+.skip-link:focus {
+    top: 10px; /* Bring the link into view when focused */
+    outline: none; /* Remove default outline */
 }
+
+/* Optional: Add more space on mobile */
+@media (max-width: 768px) {
+    .skip-link {
+        top: 10px; /* Add more space on mobile devices */
+    }
+}
+
 
 
 /* Style the link to look like a button */
